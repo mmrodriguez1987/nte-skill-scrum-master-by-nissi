@@ -13,7 +13,7 @@ SCRUM MASTER is an AI agent skill created for **Nissi Technology**, with install
 
 **Developed by [@mmrodriguez1987](https://github.com/mmrodriguez1987) · [mrkdev.pro](https://mrkdev.pro).** Built for Nissi Technology and available to the community to use, adapt, and improve under the [MIT License](LICENSE).
 
-[Workflow](#workflow) · [Features](#features) · [Installation](#installation) · [Configuration](#configuration) · [Usage](#usage) · [Contributing](#contributing) · [License](#license-and-attribution)
+[GitHub repository](https://github.com/mmrodriguez1987/nte-skill-scrum-master-by-nissi) · [Workflow](#workflow) · [Features](#features) · [Installation](#installation) · [Configuration](#configuration) · [Usage](#usage) · [Contributing](#contributing) · [License](#license-and-attribution)
 
 ## Workflow
 
@@ -74,7 +74,14 @@ The locations below follow each agent's documented skill discovery conventions. 
 
 ### Prepare the local skill folder
 
-Download or clone this repository, open a terminal in its root, and define this installation helper. It copies the skill resources without copying private `.env` files, Git history, or Python caches. It expects a new destination; use an intentional update process for an existing installation.
+Clone the public repository and enter its root:
+
+```bash
+git clone https://github.com/mmrodriguez1987/nte-skill-scrum-master-by-nissi.git
+cd nte-skill-scrum-master-by-nissi
+```
+
+In the same terminal, define this installation helper. It copies the skill resources without copying private `.env` files, Git history, or Python caches. It expects a new destination; use an intentional update process for an existing installation.
 
 ```bash
 export SCRUM_SKILL_SOURCE="$PWD"
@@ -115,6 +122,16 @@ Then choose **one location per agent**. Project commands below run from your tar
 | Gemini CLI | `install_scrum_master "$PWD/.gemini/skills/scrum-master"` | `install_scrum_master "$HOME/.gemini/skills/scrum-master"` |
 
 Keep the installed folder name **`scrum-master`**. Preserve `references/` and `scripts/`; copying only `SKILL.md` leaves the skill incomplete. Shared discovery paths can be visible to multiple agents, so avoid installing duplicate copies unnecessarily.
+
+### Direct Gemini CLI installation
+
+Gemini CLI can install directly from the published repository instead of using the copy helper:
+
+```bash
+gemini skills install https://github.com/mmrodriguez1987/nte-skill-scrum-master-by-nissi.git --scope user
+```
+
+For a project installation, run the same command from the target project with `--scope workspace` instead. Choose either the managed installation or the manual copy, then confirm discovery with `/skills list`.
 
 Official installation references: [Claude Code](https://code.claude.com/docs/en/skills), [OpenAI Codex](https://learn.chatgpt.com/docs/build-skills), [Cursor](https://cursor.com/help/customization/skills), [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills), and [Gemini CLI](https://geminicli.com/docs/cli/skills/).
 
@@ -226,7 +243,7 @@ Tests cover credential handling, pagination, uncertain write outcomes, approval 
 
 **The community is welcome to use this skill, report problems, propose improvements, and contribute changes.** Nissi Technology is the original project context; you do not need to be part of Nissi Technology to participate.
 
-1. Open an issue describing the use case, defect, or improvement when the repository is hosted on a forge.
+1. [Open an issue](https://github.com/mmrodriguez1987/nte-skill-scrum-master-by-nissi/issues) describing the use case, defect, or improvement.
 2. Work on a focused branch and follow the English writing and commit conventions.
 3. Add regression tests for behavioral changes and run the offline suite.
 4. Update the affected instructions/examples and submit a Pull Request explaining the change and its validation.
@@ -242,7 +259,7 @@ Useful contribution areas include real-instance integration fixtures, additional
 
 Suggested repository topics: `agent-skills`, `scrum-master`, `scrum`, `agile`, `sprint-planning`, `backlog-management`, `jira`, `azure-devops`, `claude-code`, `codex`, `cursor`, `github-copilot`, `gemini-cli`, `pull-request`, `mermaid`.
 
-The README title, summary, headings, and the metadata in `SKILL.md` make the project easier to describe and discover. Search indexing and marketplace listing still depend on publishing the repository and the catalog's own submission/crawling process; no ranking or indexing time is guaranteed.
+The public repository is [mmrodriguez1987/nte-skill-scrum-master-by-nissi](https://github.com/mmrodriguez1987/nte-skill-scrum-master-by-nissi). The README title, summary, headings, and metadata in `SKILL.md` describe the skill for search and catalogs. Marketplace listing and search indexing still depend on each catalog's submission/crawling process; no ranking or indexing time is guaranteed.
 
 ## License and attribution
 
